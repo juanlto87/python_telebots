@@ -30,7 +30,7 @@ while True:
     elif opcion == "2":
         print("📅 La fecha actual es:", datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     elif opcion == "3":
-        print("👋 ¡Hasta pronto!")
+        print("👋 ¡Hasta pronto, te saluda Belén Villavicencio de la clase de PYTHON!")
         break
     else:
         print("❌ Opción no válida. Intenta de nuevo.")
