@@ -48,6 +48,7 @@ carro = {
     "modelo": "Corolla",
     "año": 2020
 }
+
 carro["color"] = "Rojo"
 carro["año"] = "2025"
 print(  "Diccionario de carro:", carro)
