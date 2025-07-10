@@ -1,4 +1,4 @@
-# Clase 2 - GEORGE ANTONIO PEÑAFIEL ALVARADO
+# Clase 2 - GEORGE ANTHONY PEÑAFIEL ALVARADO
 
 # 🧪 Ejercicio 1: Objetos
 print("\n--- EJERCICIO 1: OBJETOS ---")
