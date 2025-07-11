@@ -19,11 +19,12 @@ class Celular:
 
 
 # Crear objeto celular
-mi_celular = Celular("Samsung", "Galaxy S22", 2022, "Negro")
+celular = Celular("Samsung", "Galaxy S22", 2022, "Negro")
 
 # Operaciones con el objeto
-mi_celular.llamar("0998765432")
-mi_celular.enviar_mensaje("0998765432", "Hola, ¿cómo estás?")
+celular.llamar("0998765432")
+celular.enviar_mensaje("0998765432", "Hola, ¿cómo estás?")
+
 
 """Ejercicio 2: Listas y diccionarios
 
@@ -34,15 +35,15 @@ Crea:
 
 
 # 🎬 Lista de 3 películas favoritas, cada una como un diccionario
-peliculas_favoritas = [
+p_favoritas = [
     {"nombre": "El señor de los anillos", "genero": "Fantasía", "año": 2001},
     {"nombre": "Avatar", "genero": "Ciencia ficción", "año": 2009},
     {"nombre": "Inception", "genero": "Acción / Ciencia ficción", "año": 2010}
 ]
 
 # 🔹 Imprimir cada película con su información
-print("🎬 Información de mis 3 películas favoritas:\n")
-for pelicula in peliculas_favoritas:
+print(" Información de mis 3 películas favoritas:\n")
+for pelicula in p_favoritas:
     print(f"Nombre: {pelicula['nombre']}")
     print(f"Género: {pelicula['genero']}")
     print(f"Año: {pelicula['año']}")
@@ -65,13 +66,13 @@ class Pregunta:
         self.respuesta = respuesta
 
     def mostrar(self):
-        print("\n🧠 Pregunta:")
+        print("\n Pregunta:")
         print(self.enunciado)
         for i, opcion in enumerate(self.opciones):
             print(f"{i + 1}. {opcion}")
 
-    def verificar(self, eleccion_usuario):
-        return eleccion_usuario - 1 == self.respuesta
+    def verificar(self, eleccion):
+        return eleccion - 1 == self.respuesta
 
 
 # Crear una pregunta
@@ -88,10 +89,10 @@ pregunta1.mostrar()
 try:
     numero = int(input("Ingrese el número de su respuesta: "))
     if pregunta1.verificar(numero):
-        print("✅ ¡Respuesta correcta!")
+        print("¡Respuesta correcta!")
     else:
-        print("❌ Respuesta incorrecta.")
+        print(" Respuesta incorrecta.")
 except ValueError:
-    print("⚠️ Entrada no válida. Debes ingresar un número.")
+    print(" Entrada no válida. Debes ingresar un número.")
 
 

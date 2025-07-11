@@ -9,11 +9,11 @@ Usa una función `es_primo()` para verificar si un número es primo."""
 # Función para verificar si un número es primo
 def es_primo(num):
     if num < 2:
-        print(f"❌ {num} no es primo (menor que 2)")
+        print(f"{num} no es primo (menor que 2)")
         return False
     for i in range(2, int(num**0.5) + 1):  # Solo hasta la raíz cuadrada
         if num % i == 0:
-            print(f"❌ {num} no es primo (divisible por {i})")
+            print(f"{num} no es primo (divisible por {i})")
             return False   
     return True
 
@@ -25,7 +25,7 @@ print(f"Números primos entre 1 y {n}:")
 # Imprimir los números primos desde 1 hasta n
 for i in range(1, n + 1):
     if es_primo(i):
-        print(f"✅ {i} es primo")
+        print(f" {i} es primo")
         
 """## 🧪 Ejercicio 2: Menú interactivo
 
@@ -46,14 +46,14 @@ while True:
     opcion = input("Selecciona una opción (1-3): ")
 
     if opcion == "1":
-        print("💡 Nunca te rindas. ¡Los grandes logros requieren tiempo y esfuerzo!")
+        print("Nunca te rindas. ¡Los grandes logros requieren tiempo y esfuerzo!")
     elif opcion == "2":
         fecha_actual = datetime.datetime.now()
-        print(f"📅 La fecha y hora actual es: {fecha_actual.strftime('%d/%m/%Y %H:%M:%S')}")
+        print(f" La fecha y hora actual es: {fecha_actual.strftime('%d/%m/%Y %H:%M:%S')}")
     elif opcion == "3":
-        print("👋 ¡Hasta luego!")
+        print(" ¡Hasta luego!")
         break
     else:
-        print("❌ Opción no válida. Intenta de nuevo.")
+        print("Opción no válida. Intenta de nuevo.")
 
 print("Fin del programa.")
