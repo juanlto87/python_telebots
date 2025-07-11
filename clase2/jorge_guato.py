@@ -88,11 +88,20 @@ def ejercicio2():
     # Lista con 3 películas favoritas
     peliculas_favoritas = ["El Padrino", "Pulp Fiction", "Forrest Gump"]
     
-    # Diccionario con información personal
-    informacion_personal = {
-        "nombre": "Jorge",
-        "genero": "Masculino",
-        "año": 1984
+    # Diccionario con información de cada película (nombre, género, año)
+    informacion_peliculas = {
+        "El Padrino": {
+            "genero": "Drama",
+            "año": 1972
+        },
+        "Pulp Fiction": {
+            "genero": "Crimen",
+            "año": 1994
+        },
+        "Forrest Gump": {
+            "genero": "Drama",
+            "año": 1994
+        }
     }
     
     # Imprimir operaciones
@@ -104,12 +113,20 @@ def ejercicio2():
     print(f"Última película favorita: {peliculas_favoritas[-1]}")
     print(f"Total de películas: {len(peliculas_favoritas)}")
     
-    print("\nInformación personal:")
-    for clave, valor in informacion_personal.items():
-        print(f"{clave.capitalize()}: {valor}")
+    print("\nInformación detallada de cada película:")
+    for pelicula in peliculas_favoritas:
+        info = informacion_peliculas[pelicula]
+        print(f"\n🎬 {pelicula}:")
+        print(f"   Género: {info['genero']}")
+        print(f"   Año: {info['año']}")
     
-    print(f"\nNombre: {informacion_personal['nombre']}")
-    print(f"Edad aproximada: {2024 - informacion_personal['año']} años")
+    print("\nOperaciones con el diccionario:")
+    print(f"Película más antigua: {min(informacion_peliculas.items(), key=lambda x: x[1]['año'])[0]}")
+    print(f"Película más reciente: {max(informacion_peliculas.items(), key=lambda x: x[1]['año'])[0]}")
+    
+    # Contar géneros
+    generos = [info['genero'] for info in informacion_peliculas.values()]
+    print(f"Géneros: {', '.join(set(generos))}")
 
 # Ejercicio 3: Trivia con POO
 class Pregunta:
@@ -214,4 +231,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print("¡Programa terminado!")
