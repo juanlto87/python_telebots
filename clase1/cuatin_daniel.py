@@ -32,12 +32,21 @@ def mostrar_menu():
     print("3. Salir")
 
 def ejercicio2():
+    frases_motivacionales = [
+        "¡Tú puedes lograr todo lo que te propongas! 💪",
+        "Cada día es una nueva oportunidad para ser mejor. 🌟",
+        "La perseverancia es la clave del éxito. 🚀",
+        "No te rindas, el éxito está más cerca de lo que piensas. 🌈",
+        "Cree en ti mismo y todo será posible. ✨"
+    ]
     while True:
         mostrar_menu()
         opcion = input("Selecciona una opción (1-3): ")
         
         if opcion == "1":
-            print("\n¡Tú puedes lograr todo lo que te propongas! 💪")
+            import random
+            frase = random.choice(frases_motivacionales)  # Selecciona una frase ale
+            print(f"\nFrase motivacional: {frase}")
         elif opcion == "2":
             fecha_actual = datetime.datetime.now().strftime("%d/%m/%Y")
             print(f"\nLa fecha actual es: {fecha_actual}")

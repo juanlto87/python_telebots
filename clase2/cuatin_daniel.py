@@ -7,32 +7,24 @@ sencilla de entender cómo funcionan los objetos y métodos.
 """
 # Ejercio 1: Definición de una clase Heroe
 class Heroe:
-    def __init__(self, nombre, poder):
+    def __init__(self, nombre, genero, identidad_secreta, poder):
         self.nombre = nombre
+        self.genero = genero
+        self.identidad_secreta = identidad_secreta
         self.poder = poder
 
     def presentar(self):
-        print(f"Soy {self.nombre} y tengo el poder de {self.poder}.")
+        print(f"Soy {self.nombre} y tengo el poder de {self.poder}.", f"mi identidad secreta es {self.identidad_secreta}.")
+        
+    def to_json(self):
+        return {
+            "nombre": self.nombre,
+            "genero": self.genero,
+            "identidad_secreta": self.identidad_secreta,
+            "poder": self.poder
+        }
 
-""" 
-La clase Celular representa un teléfono móvil con atributos como marca, modelo, año y color.
-Tiene métodos para realizar llamadas, enviar mensajes y mostrar información del celular.
-"""
-class Celular:
-    def __init__(self, marca, modelo, year, color):
-        self.marca = marca
-        self.modelo = modelo
-        self.year = year
-        self.color = color
 
-    def llmar(self, numero):
-        print(f"Llamando al número {numero} desde el celular {self.marca} {self.modelo}.")
-    
-    def enviar_mensaje(self, numero, mensaje):
-        print(f"Enviando mensaje '{mensaje}' al número {numero} desde el celular {self.marca} {self.modelo}.")
-    
-    def mostrar_info(self):
-        print(f"Celular: {self.marca} {self.modelo}")
         
 # Ejercicio 2: Listas y diccionarios
 
@@ -81,15 +73,15 @@ class Trivia:
     
 if __name__ == "__main__":
     # Ejercicio 1: Crear un héroe y presentarlo
-    heroe = Heroe("Superman", "volar")
+    print("************ Ejercicio 1: Clase Heroe ************")
+    heroe = Heroe("Superman", "masculino", "Clark Kent", "Super fuerza")
     heroe.presentar()
-
-    # Ejercicio 2: Crear un celular y mostrar su información
-    celular = Celular("Samsung", "Galaxy S21", 2021, "Negro")
-    celular.mostrar_info()
-    celular.llmar("123456789")
-    celular.enviar_mensaje("987654321", "Hola, ¿cómo estás?")
-    
+    heroe.poder = "Volar"
+    heroe.presentar()
+    heroe_json = heroe.to_json()
+    print("Héroe en formato JSON:", heroe_json)
+    print("************ Fin del Ejercicio 1 ************\n")
+    print("************ Ejercicio 2: Lista de Películas ************")
     # Ejercicio 2: Crear una lista de películas
     peliculas = [
         Pelicula("Toy Story", "John Lasseter", 1995),
@@ -99,7 +91,8 @@ if __name__ == "__main__":
     ]
     for pelicula in peliculas:
         pelicula.mostrar_info()
-
+    print("************ Fin del Ejercicio 2 ************\n")
+    print("************ Ejercicio 3: Trivia ************")
     # Ejercicio 3: Crear una trivia y iniciarla
     trivia = Trivia()
     pregunta1 = Pregunta(
