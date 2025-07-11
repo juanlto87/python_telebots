@@ -2,7 +2,6 @@
 
 from datetime import date
 
-
 def es_primo(number):
     if number <= 1:
         return False
@@ -18,6 +17,7 @@ if es_primo(number):
 else:
     print(f"{number} NO ES UN NÚMERO PRIMO.")
 
+
 #Menu ejercicio 2
 option1 = 1
 option2 = 2
@@ -29,7 +29,7 @@ elif resultOption == 2:
     dateActual = date.today()
     print(f"La fecha de hoy es:{dateActual}")
 elif resultOption == 3:
-    print ("Saliendo, Saludos..")
+    print ("XSaliendo, Saludos..")
     exit()
 else:
     print ("El número ingresado no es correcto")
