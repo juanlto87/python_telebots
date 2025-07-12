@@ -109,7 +109,7 @@ preguntas = [pregunta1, pregunta2, pregunta3]
 puntaje = 0
 
 # Juego de trivia
-print("🎮 BIENVENIDO A LA TRIVIA")
+print("BIENVENIDO A LA TRIVIA")
 for pregunta in preguntas:
     pregunta.mostrar()
     try:
